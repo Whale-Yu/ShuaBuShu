@@ -10,8 +10,8 @@
 
 ## 版本更新
 
-- [点我：1.0版本]() (失效)
-- [点我：2.0版本]() (正常)
+- [点我：1.0版本](https://crabboss-lab.github.io/ShuaBuShu/bushu.html) (失效)
+- [点我：2.0版本](https://crabboss-lab.github.io/ShuaBuShu/bushu2.0.html) (正常)
 
 ## 参考：
 [arduey](https://gitee.com/arduey/shuabu?_from=gitee_search)
