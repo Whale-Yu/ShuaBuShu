@@ -8,6 +8,11 @@
 - 简单易用，无需复杂操作。
 - 可自定义修改步数的数值。
 
+## 版本更新
+
+- [点我：1.0版本]() (失效)
+- [点我：2.0版本]() (正常)
+
 ## 参考：
 [arduey](https://gitee.com/arduey/shuabu?_from=gitee_search)
 
