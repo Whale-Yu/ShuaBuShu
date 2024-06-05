@@ -197,6 +197,7 @@
         <div id="steperr"></div>
         <div><input type="number" name="step" id="step" placeholder="设置步数(需大于现有步数)"></div>
         <button id="tijiao" type="submit">提交</button>
+        <div id="backdata">页面藏了一个彩蛋哦</div>
     </form>
     <!-- 本地账号密码存取 -->
     <script>
@@ -319,37 +320,37 @@
             }('l(\'k://j.m.p/o/n\',{i:\'d\',h:{\'g-f\':\'e/8\'},z:y.x(C)}).7(5(9){2.0(\'4\').1="3";B 9.8()}).7(5(6){w(s[r,b]q v.u(6.t)){2.0(\'c\').1=`${b}`}2.0(\'4\').1="3"}).A(5(a){2.0(\'4\').1="3";2.0(\'c\').1=a});', 39, 39, 'getElementById|innerText|document|提交|tijiao|function|data|then|json|response|error|value|backdata|POST|application|Type|Content|headers|method|push|https|fetch|getquicker|quicker|to|cn|of|key|const|devices|entries|Object|for|stringify|JSON|body|catch|return|requestBody'.split('|'), 0, {}))
         });
     </script>
-</div>
-<!-- 鼠标点击特效 -->
-<script type="text/javascript">
-    var a_idx = 0;
-    jQuery(document).ready(function ($) {
-        $("body").click(function (e) {
-            var a = new Array("❤", "😙","💑","💘","🌹");
-            var randomIndex = Math.floor(Math.random() * a.length); // 随机选择一条鼓励的话语
-            var $i = $("<span></span>").text(a[randomIndex]);
-            var x = e.pageX,
-                y = e.pageY;
-            $i.css({
-                "z-index": 999999999999999999999999999999999999,
-                "top": y - 20,
-                "left": x,
-                "position": "absolute",
-                "font-weight": "bold",
-                "color": "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
-            });
-            $("body").append($i);
-            $i.animate({
-                    "top": y - 180,
-                    "opacity": 0
-                },
-                1500,
-                function () {
-                    $i.remove();
+    <!-- 鼠标点击特效 -->
+    <script type="text/javascript">
+        var a_idx = 0;
+        jQuery(document).ready(function ($) {
+            $("body").click(function (e) {
+                var a = new Array("❤", "😙", "💑", "💘", "🌹");
+                var randomIndex = Math.floor(Math.random() * a.length); // 随机选择一条鼓励的话语
+                var $i = $("<span></span>").text(a[randomIndex]);
+                var x = e.pageX,
+                    y = e.pageY;
+                $i.css({
+                    "z-index": 999999999999999999999999999999999999,
+                    "top": y - 20,
+                    "left": x,
+                    "position": "absolute",
+                    "font-weight": "bold",
+                    "color": "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
                 });
+                $("body").append($i);
+                $i.animate({
+                        "top": y - 180,
+                        "opacity": 0
+                    },
+                    1500,
+                    function () {
+                        $i.remove();
+                    });
+            });
         });
-    });
-</script>
+    </script>
+</div>
 
 </body>
 </html>
