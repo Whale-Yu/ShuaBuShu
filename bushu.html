@@ -1,218 +1,355 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<link rel="shortcut icon" href="https://files.getquicker.net/_icons/FC32D3F57A1D4C065B18EE4FF26420C4C5D1A683.png" type="image/x-icon">
-		<link rel="icon" href="https://files.getquicker.net/_icons/FC32D3F57A1D4C065B18EE4FF26420C4C5D1A683.png" type="image/x-icon">
-		<link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.min.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>微信运动Pro</title>
-        <style type="text/css">
-            * {
-                margin: 0;
-                padding: 0;
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://files.getquicker.net/_icons/FC32D3F57A1D4C065B18EE4FF26420C4C5D1A683.png" type="image/x-icon">
+    <link rel="icon" href="https://files.getquicker.net/_icons/FC32D3F57A1D4C065B18EE4FF26420C4C5D1A683.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>微信运动Pro</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            background-image: url("https://browser6.qhimg.com/dm/3048_1728_/t01075b395dd0873b73.jpg");
+            background-size: cover;
+            font-family: "montserrat";
+        }
+
+        .form {
+            width: 70%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, .05);
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px #000;
+            text-align: center;
+            font-family: "微软雅黑";
+            color: #000000;
+            background-image: url(https://files.getquicker.net/_sitefiles/_guides/52593d69-c99a-4367-8b98-08d9a65be47e/2023/12/25/223125_202824_0.gif);
+        }
+
+        input:-webkit-autofill {
+            transition: background-color 5000s ease-in-out 0s;
+        }
+
+        input {
+            margin: 12px 5px 15px;
+            height: 24px;
+            background-color: transparent;
+            border-style: none;
+            font-size: 1.2em;
+            outline: none;
+            padding: 1px 0px 1px 12px;
+            text-decoration: none;
+            display: inline-block;
+            color: #000000 !important;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none !important;
+        }
+
+        input::placeholder {
+            color: #000000;
+        }
+
+        input[type='number'] {
+            -moz-appearance: textfield;
+        }
+
+        #tijiao, #a1, #a2 {
+            background-color: rgba(255, 255, 255, .05);
+            box-shadow: 0 0 5px #8888;
+            font-size: 1.1em;
+            border-radius: 10px;
+            color: #000000;
+            border: none;
+        }
+
+        #a1, #a2 {
+            padding: 8px 12px;
+            margin: 0px 8px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #tijiao {
+            padding: 10px 20px;
+        }
+
+        #usererr, #passworderr, #steperr {
+            color: red;
+            padding: 12px 0px;
+            position: fixed;
+            right: 10px;
+            font-size: 1.1em;
+        }
+
+        #backdata {
+            color: red;
+            font-size: 1.1em;
+            float: right;
+            position: fixed;
+            width: 85%;
+            font-size: 1.1em;
+        }
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #fora {
+            margin: 15px auto;
+        }
+
+        h1 {
+            font-weight: 200;
+            margin: 0px 0px 20px 0px;
+            font-weight: bold;
+        }
+
+        .titlebutton {
+            background-color: transparent;
+            border: none;
+        }
+
+        .animate__animated {
+            animation-duration: 2.5s;
+            overflow: hidden;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+<!-- 视频背景获取 -->
+<script>
+    /*视频body*/
+    eval(function (p, a, c, k, e, d) {
+        e = function (c) {
+            return (c < a ? "" : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
+        };
+        if (!''.replace(/^/, String)) {
+            while (c--) d[e(c)] = k[c] || e(c);
+            k = [function (e) {
+                return d[e]
+            }];
+            e = function () {
+                return '\\w+'
+            };
+            c = 1;
+        }
+        ;
+        while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
+        return p;
+    }('1b(14(p,a,c,k,e,d){e=14(c){13(c<a?"":e(1i(c/a)))+((c=c%a)>1g?18.1e(c+1f):c.1d(1c))};15(!\'\'.16(/^/,18)){17(c--)d[e(c)]=k[c]||e(c);k=[14(e){13 d[e]}];e=14(){13\'\\\\w+\'};c=1};17(c--)15(k[c])p=p.16(19 1a(\'\\\\b\'+e(c)+\'\\\\b\',\'g\'),k[c]);13 p}(\'P(n(p,a,c,k,e,d){e=n(c){o(c<a?"":e(x(c/a)))+((c=c%a)>G?s.H(c+I):c.F(C))};u(!\\\'\\\'.t(/^/,s)){q(c--)d[e(c)]=k[c]||e(c);k=[n(e){o d[e]}];e=n(){o\\\'\\\\\\\\w+\\\'};c=1};q(c--)u(k[c])p=p.t(D E(\\\'\\\\\\\\b\\\'+e(c)+\\\'\\\\\\\\b\\\',\\\'g\\\'),k[c]);o p}(\\\'8 7={9:"b@a.6",2:"1",3:"",5:"0",4:"",0:"i-k-m-l-h",d:c,e:g,f:j};\\\',r,r,\\\'v|y|B|z|A|X|Y|W|U|V|Z|10|12|11|T|M|N|L|J|K|R|S|Q\\\'.O(\\\'|\\\'),0,{}))\',1m,1k,\'|||||||||||||||||||||||14|13||17|1j|18|16|15|1p||1i|1q|1o|1l|1n|1c|19|1a|1d|1g|1e|1f|1D|1E|1C|1A|1B|1h|1b|1I|1H|1F|1G|1t|1u|1r|1s|1v|1y|1z|1w|1x\'.1h(\'|\'),0,{}))', 62, 107, '|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||return|function|if|replace|while|String|new|RegExp|eval|36|toString|fromCharCode|29|35|split|parseInt|23|65|data|62|code|toDevice|action|MTKT|requestBody1|operation|var|toUser|com|wait|true|qq|3421391653|txt|3000|3926f807971a|921b627c|false|934d|maxWaitMs|4ddd|4da0'.split('|'), 0, {}))
+    fetch('https://push.getquicker.cn/to/quicker', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestBody1)
+    }).then(function (response) {
+        return response.json()
+    }).then(function (data) {
+        for (const [key, value] of Object.entries(data.devices)) {
+            var videosrc = `${value}`
+        }
+        var video = document.createElement('video');
+        var videohere = document.getElementById('videohere');
+        videohere.appendChild(video);
+        video.outerHTML = `<video class="video-background" autoplay loop muted><source id="video" src=${videosrc} type="video/mp4"></video>`
+    }).catch(function (error) {
+        console.log(error)
+    });
+</script>
+<div id="videohere"></div>
+<div class="form">
+    <button class="titlebutton" onclick="getvideourl()"><h1 class="animate__animated animate__heartBeat animate__infinite">人在家中躺,一键刷步数</h1>
+    </button>
+    <div id="fora">
+        <a id="a1" href="https://github.com/CrabBoss-lab/ShuaBuShu">刷步教程</a>
+        <a id="a2" href="https://github.com/CrabBoss-lab/ShuaBuShu">@蟹老板出品</a>
+    </div>
+    <form id="yourForm" action="#" method="GET">
+        <div id="usererr"></div>
+        <div><input type="text" name="user" id="user" placeholder="zepp帐号"></div>
+        <div id="passworderr"></div>
+        <div><input type="password" name="password" id="password" placeholder="密码"></div>
+        <div id="steperr"></div>
+        <div><input type="number" name="step" id="step" placeholder="设置步数(需大于现有步数)"></div>
+        <button id="tijiao" type="submit">提交</button>
+    </form>
+    <!-- 本地账号密码存取 -->
+    <script>
+        eval(function (p, a, c, k, e, d) {
+            e = function (c) {
+                return (c < a ? "" : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
+            };
+            if (!''.replace(/^/, String)) {
+                while (c--) d[e(c)] = k[c] || e(c);
+                k = [function (e) {
+                    return d[e]
+                }];
+                e = function () {
+                    return '\\w+'
+                };
+                c = 1;
             }
-            body {
-                height: 100vh;
-                width: 100%;
-                overflow: hidden;
-				background-image:url("https://browser6.qhimg.com/dm/3048_1728_/t01075b395dd0873b73.jpg");
-                background-size: cover;
-                font-family: "montserrat";
+            ;
+            while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
+            return p;
+        }('4 0=5.7(\'0\');4 1=5.7(\'1\');b(0&&1){2.3(\'0\').6=0;2.3(\'1\').6=1}2.9(\'c\').f(\'a\',e(d){4 0=2.3(\'0\').6;4 1=2.3(\'1\').6;5.8(\'0\',0);5.8(\'1\',1)});', 16, 16, 'user|password|document|getElementById|var|localStorage|value|getItem|setItem|querySelector|submit|if|form|event|function|addEventListener'.split('|'), 0, {}))
+    </script>
+    <!-- 复制视频链接到剪切板 -->
+    <script>
+        function getvideourl() {
+            var dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.innerText = document.getElementById("video").src;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+            document.getElementById('backdata').innerText = "已复制背景视频链接";
+        }
+    </script>
+    <!-- 刷步 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+        var form = document.querySelector('#yourForm');
+        form.addEventListener('submit', function (event) {
+            let [usersign, passworksign, stepsign1, stepsign2] = [true, true, true, true];
+            document.getElementById('backdata').innerText = "";
+            event.preventDefault();
+            var user = document.getElementById('user').value;
+            var step = document.getElementById('step').value;
+            var password = document.getElementById('password').value;
+            /*账号判断非空*/
+            document.getElementById('usererr').innerText = (!user) ? "请输入账号" : "";
+            usersign = !user ? false : true;
+            /*密码判断非空*/
+            document.getElementById('passworderr').innerText = (!password) ? "请输入密码" : "";
+            passwordsign = !password ? false : true;
+            /*步数判断非空*/
+            document.getElementById('steperr').innerText = (!step) ? "请输入步数" : "";
+            stepsign1 = !step ? false : true;
+            /*步数判断合法性*/
+            if (step || step == "0") {
+                document.getElementById('steperr').innerText = (!Number.isInteger(parseInt(step)) || parseInt(step) <= 0) ? "请输入非零正整数" : (parseInt(step) > 98800) ? "最大不超过98800" : "";
+                stepsign1 = !Number.isInteger(parseInt(step)) || parseInt(step) <= 0 ? false : true;
+                stepsign2 = parseInt(step) > 98800 ? false : true;
             }
-            .form {
-                width: 70%;
-                max-width: 600px;
-                background-color: rgba(255, 255, 255, .05);
-                position: absolute;
-                top: 30%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                padding: 25px;
-                border-radius: 10px;
-                box-shadow: 0 0 5px #000;
-                text-align: center;
-                font-family: "微软雅黑";
-                color: #000000;
-				background-image: url(https://files.getquicker.net/_sitefiles/_guides/52593d69-c99a-4367-8b98-08d9a65be47e/2023/12/25/223125_202824_0.gif);
-            }
-            input:-webkit-autofill {
-                transition: background-color 5000s ease-in-out 0s;
-            }
-            input {
-                margin: 12px 5px 15px;
-                height: 24px;
-                background-color: transparent;
-                border-style:none;
-                font-size: 1.2em;
-				outline: none;
-			    padding: 1px 0px 1px 12px;
-				text-decoration: none;
-				display: inline-block;
-				color: #000000 !important;
-            }
-            input::-webkit-outer-spin-button,
-            input::-webkit-inner-spin-button {
-                -webkit-appearance: none !important;
-            }
-			input::placeholder{
-                color: #000000;
-			}
-            input[type='number'] {
-                -moz-appearance: textfield;
-            }
-			#tijiao, #a1, #a2{
-                background-color: rgba(255, 255, 255, .05);
-                box-shadow: 0 0 5px #8888;
-                font-size:1.1em;
-                border-radius: 10px;
-                color: #000000;
-                border: none;
-			}
-			#a1, #a2 {
-			    padding: 8px 12px;
-			    margin:0px 8px;
-			    font-size: 16px;
-			    text-decoration:none;
-			}
-			#tijiao{
-                padding: 10px 20px;
-			}
-			#usererr, #passworderr, #steperr{
-			    color: red;
-			    padding: 12px 0px;
-				position: fixed;
-				right: 10px;
-				font-size: 1.1em;
-			}
-			#backdata{
-				color: red;
-				font-size: 1.1em;
-				float: right;
-				position: fixed;
-				width: 85%;
-			    font-size: 1.1em;
-			}
-			.video-background {
-			    position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-			}
-			#fora{
-				margin: 15px auto;
-			}
-			h1{
-                font-weight: 200;
-				margin:0px 0px 20px 0px;
-                font-weight:bold;
-			}
-			.titlebutton{
-				background-color:transparent;
-				border:none;
-			}
-			.animate__animated{
-				animation-duration: 2.5s;
-				overflow: hidden;
-				animation-iteration-count: infinite;
-			}
-        </style>
-	</head>
-	<body>
-		<!-- 视频背景获取 -->
-		<script>
-			/*视频body*/eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('1b(14(p,a,c,k,e,d){e=14(c){13(c<a?"":e(1i(c/a)))+((c=c%a)>1g?18.1e(c+1f):c.1d(1c))};15(!\'\'.16(/^/,18)){17(c--)d[e(c)]=k[c]||e(c);k=[14(e){13 d[e]}];e=14(){13\'\\\\w+\'};c=1};17(c--)15(k[c])p=p.16(19 1a(\'\\\\b\'+e(c)+\'\\\\b\',\'g\'),k[c]);13 p}(\'P(n(p,a,c,k,e,d){e=n(c){o(c<a?"":e(x(c/a)))+((c=c%a)>G?s.H(c+I):c.F(C))};u(!\\\'\\\'.t(/^/,s)){q(c--)d[e(c)]=k[c]||e(c);k=[n(e){o d[e]}];e=n(){o\\\'\\\\\\\\w+\\\'};c=1};q(c--)u(k[c])p=p.t(D E(\\\'\\\\\\\\b\\\'+e(c)+\\\'\\\\\\\\b\\\',\\\'g\\\'),k[c]);o p}(\\\'8 7={9:"b@a.6",2:"1",3:"",5:"0",4:"",0:"i-k-m-l-h",d:c,e:g,f:j};\\\',r,r,\\\'v|y|B|z|A|X|Y|W|U|V|Z|10|12|11|T|M|N|L|J|K|R|S|Q\\\'.O(\\\'|\\\'),0,{}))\',1m,1k,\'|||||||||||||||||||||||14|13||17|1j|18|16|15|1p||1i|1q|1o|1l|1n|1c|19|1a|1d|1g|1e|1f|1D|1E|1C|1A|1B|1h|1b|1I|1H|1F|1G|1t|1u|1r|1s|1v|1y|1z|1w|1x\'.1h(\'|\'),0,{}))',62,107,'|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||return|function|if|replace|while|String|new|RegExp|eval|36|toString|fromCharCode|29|35|split|parseInt|23|65|data|62|code|toDevice|action|MTKT|requestBody1|operation|var|toUser|com|wait|true|qq|3421391653|txt|3000|3926f807971a|921b627c|false|934d|maxWaitMs|4ddd|4da0'.split('|'),0,{}))
-			fetch('https://push.getquicker.cn/to/quicker', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify(requestBody1)
-			}).then(function(response) {
-				return response.json()
-			}).then(function(data) {
-				for (const [key, value] of Object.entries(data.devices)) {
-					var videosrc = `${value}`
-				}
-				var video = document.createElement('video');
-				var videohere = document.getElementById('videohere');
-				videohere.appendChild(video);
-				video.outerHTML = `<video class="video-background" autoplay loop muted><source id="video" src=${videosrc} type="video/mp4"></video>`
-			}).catch(function(error) {
-				console.log(error)
-			});
-		</script>
-		<div id="videohere"></div>
-		<div class="form">
-			<button class="titlebutton" onclick="getvideourl()"><h1 class="animate__animated animate__heartBeat animate__infinite">人在家中躺,一键刷步数</h1></button>
-            <div id="fora">
-				<a id="a1" href="https://github.com/CrabBoss-lab/ShuaBuShu">刷步教程</a>
-				<a id="a2" href="https://github.com/CrabBoss-lab/ShuaBuShu">@蟹老板出品</a>
-			</div>
-			<form id="yourForm" action="#" method="GET">
-				<div id="usererr"></div>
-				<div><input type="text" name="user" id="user" placeholder="zepp帐号"></div>
-				<div id="passworderr"></div>
-				<div><input type="password" name="password" id="password" placeholder="密码"></div>
-				<div id="steperr"></div>
-				<div><input type="number" name="step" id="step"placeholder="设置步数(需大于现有步数)"></div>
-				<button id="tijiao" type="submit">提交</button>
-				<div id="backdata">页面藏了一个彩蛋哦</div>
-			</form>
-			<!-- 本地账号密码存取 -->
-            <script>
-				eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('4 0=5.7(\'0\');4 1=5.7(\'1\');b(0&&1){2.3(\'0\').6=0;2.3(\'1\').6=1}2.9(\'c\').f(\'a\',e(d){4 0=2.3(\'0\').6;4 1=2.3(\'1\').6;5.8(\'0\',0);5.8(\'1\',1)});',16,16,'user|password|document|getElementById|var|localStorage|value|getItem|setItem|querySelector|submit|if|form|event|function|addEventListener'.split('|'),0,{}))
-            </script>
-			<!-- 复制视频链接到剪切板 -->
-            <script>
-				function getvideourl(){
-				    var dummy = document.createElement("textarea");
-					document.body.appendChild(dummy);
-					dummy.innerText = document.getElementById("video").src;
-					dummy.select();
-					document.execCommand("copy");
-					document.body.removeChild(dummy);
-					document.getElementById('backdata').innerText="已复制背景视频链接";
-				}
-			</script>
-			<!-- 刷步 -->
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-            <script>
-				var form = document.querySelector('#yourForm');
-				form.addEventListener('submit', function(event) {
-					let [usersign, passworksign, stepsign1, stepsign2] = [true, true, true, true];
-					document.getElementById('backdata').innerText="";
-					event.preventDefault();
-					var user = document.getElementById('user').value;
-					var step = document.getElementById('step').value;
-					var password = document.getElementById('password').value;
-					/*账号判断非空*/
-					document.getElementById('usererr').innerText = (!user) ? "请输入账号" : "";
-					usersign = !user ? false : true;
-					/*密码判断非空*/
-					document.getElementById('passworderr').innerText = (!password) ? "请输入密码" : "";
-					passwordsign = !password ? false : true;
-					/*步数判断非空*/
-					document.getElementById('steperr').innerText = (!step) ? "请输入步数" : "";
-					stepsign1 = !step ? false : true;
-					/*步数判断合法性*/
-					if (step || step == "0") {
-						document.getElementById('steperr').innerText = (!Number.isInteger(parseInt(step)) || parseInt(step) <= 0) ?"请输入非零正整数" : (parseInt(step) > 98800) ? "最大不超过98800" : "";
-						stepsign1 = !Number.isInteger(parseInt(step)) || parseInt(step) <= 0 ? false : true;
-						stepsign2 = parseInt(step) > 98800 ? false : true;
-					}
-					/*账号密码步数没问题*/
-					if (!(usersign && passworksign && stepsign1 && stepsign2)) return;
-					/*刷步data*/eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('f g=6.d.e.a(\'i\');f 7=6.d.e.a(\'j\');k h=6.l.q((\'c\'+(0.4(0.8()*2)).1()).3(-5)+r+"b"+(\'s\'+(0.4(0.8()*2)).1()).3(-9)+n+"b"+(\'c\'+(0.4(0.8()*2)).1()).3(-5)+m,g,{7:7}).1();p.o();',29,29,'Math|toString|987654321|slice|floor||CryptoJS|iv|random||parse|kwaz|00000|enc|Utf8|const|cryptoKey|dataValue|8765432112345678|1234567887654321|var|AES|step|password|preventDefault|event|encrypt|user|000000000'.split('|'),0,{}))
-					/*刷步body*/eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('8 7={9:"b@a.6",2:"1",3:"",5:"0",4:c,0:"j-l-n-m-i",e:d,f:h,g:k};',24,24,'action|MTKT|code|toDevice|data|operation|com|requestBody|var|toUser|qq|3421391653|dataValue|true|wait|maxWaitMs|txt|8000|7eadd36106eb|65a7fd74|false|6c57|a05e|41d5'.split('|'),0,{}))
-					document.getElementById('tijiao').innerText="正在提交 请稍等"
-					/*刷步fetch*/eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('l(\'k://j.m.p/o/n\',{i:\'d\',h:{\'g-f\':\'e/8\'},z:y.x(C)}).7(5(9){2.0(\'4\').1="3";B 9.8()}).7(5(6){w(s[r,b]q v.u(6.t)){2.0(\'c\').1=`${b}`}2.0(\'4\').1="3"}).A(5(a){2.0(\'4\').1="3";2.0(\'c\').1=a});',39,39,'getElementById|innerText|document|提交|tijiao|function|data|then|json|response|error|value|backdata|POST|application|Type|Content|headers|method|push|https|fetch|getquicker|quicker|to|cn|of|key|const|devices|entries|Object|for|stringify|JSON|body|catch|return|requestBody'.split('|'),0,{}))
-				});
-            </script>
-		</div>
+            /*账号密码步数没问题*/
+            if (!(usersign && passworksign && stepsign1 && stepsign2)) return;
+            /*刷步data*/
+            eval(function (p, a, c, k, e, d) {
+                e = function (c) {
+                    return (c < a ? "" : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
+                };
+                if (!''.replace(/^/, String)) {
+                    while (c--) d[e(c)] = k[c] || e(c);
+                    k = [function (e) {
+                        return d[e]
+                    }];
+                    e = function () {
+                        return '\\w+'
+                    };
+                    c = 1;
+                }
+                ;
+                while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
+                return p;
+            }('f g=6.d.e.a(\'i\');f 7=6.d.e.a(\'j\');k h=6.l.q((\'c\'+(0.4(0.8()*2)).1()).3(-5)+r+"b"+(\'s\'+(0.4(0.8()*2)).1()).3(-9)+n+"b"+(\'c\'+(0.4(0.8()*2)).1()).3(-5)+m,g,{7:7}).1();p.o();', 29, 29, 'Math|toString|987654321|slice|floor||CryptoJS|iv|random||parse|kwaz|00000|enc|Utf8|const|cryptoKey|dataValue|8765432112345678|1234567887654321|var|AES|step|password|preventDefault|event|encrypt|user|000000000'.split('|'), 0, {}))
+            /*刷步body*/
+            eval(function (p, a, c, k, e, d) {
+                e = function (c) {
+                    return (c < a ? "" : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
+                };
+                if (!''.replace(/^/, String)) {
+                    while (c--) d[e(c)] = k[c] || e(c);
+                    k = [function (e) {
+                        return d[e]
+                    }];
+                    e = function () {
+                        return '\\w+'
+                    };
+                    c = 1;
+                }
+                ;
+                while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
+                return p;
+            }('8 7={9:"b@a.6",2:"1",3:"",5:"0",4:c,0:"j-l-n-m-i",e:d,f:h,g:k};', 24, 24, 'action|MTKT|code|toDevice|data|operation|com|requestBody|var|toUser|qq|3421391653|dataValue|true|wait|maxWaitMs|txt|8000|7eadd36106eb|65a7fd74|false|6c57|a05e|41d5'.split('|'), 0, {}))
+            document.getElementById('tijiao').innerText = "正在提交 请稍等"
+            /*刷步fetch*/
+            eval(function (p, a, c, k, e, d) {
+                e = function (c) {
+                    return (c < a ? "" : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
+                };
+                if (!''.replace(/^/, String)) {
+                    while (c--) d[e(c)] = k[c] || e(c);
+                    k = [function (e) {
+                        return d[e]
+                    }];
+                    e = function () {
+                        return '\\w+'
+                    };
+                    c = 1;
+                }
+                ;
+                while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
+                return p;
+            }('l(\'k://j.m.p/o/n\',{i:\'d\',h:{\'g-f\':\'e/8\'},z:y.x(C)}).7(5(9){2.0(\'4\').1="3";B 9.8()}).7(5(6){w(s[r,b]q v.u(6.t)){2.0(\'c\').1=`${b}`}2.0(\'4\').1="3"}).A(5(a){2.0(\'4\').1="3";2.0(\'c\').1=a});', 39, 39, 'getElementById|innerText|document|提交|tijiao|function|data|then|json|response|error|value|backdata|POST|application|Type|Content|headers|method|push|https|fetch|getquicker|quicker|to|cn|of|key|const|devices|entries|Object|for|stringify|JSON|body|catch|return|requestBody'.split('|'), 0, {}))
+        });
+    </script>
+</div>
+<!-- 鼠标点击特效 -->
+<script type="text/javascript">
+    var a_idx = 0;
+    jQuery(document).ready(function ($) {
+        $("body").click(function (e) {
+            var a = new Array("❤", "😙","💑","💘","🌹");
+            var randomIndex = Math.floor(Math.random() * a.length); // 随机选择一条鼓励的话语
+            var $i = $("<span></span>").text(a[randomIndex]);
+            var x = e.pageX,
+                y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+            });
+            $("body").append($i);
+            $i.animate({
+                    "top": y - 180,
+                    "opacity": 0
+                },
+                1500,
+                function () {
+                    $i.remove();
+                });
+        });
+    });
+</script>
 
 </body>
 </html>
