@@ -16,28 +16,31 @@
         }
 
         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
-            width: 100%;
-            overflow: hidden;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             background-image: url(https://files.getquicker.net/_sitefiles/_guides/52593d69-c99a-4367-8b98-08d9a65be47e/2023/12/25/223125_202824_0.gif);
-            background-size: cover;
-            font-family: "montserrat";
         }
 
         .form {
             width: 70%;
             max-width: 600px;
-            background-color: rgba(255, 255, 255, .05);
+            background-color: #fff;
             position: absolute;
             top: 30%;
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 0 5px #000;
+            /*box-shadow: 0 0 5px #000;*/
             text-align: center;
             font-family: "微软雅黑";
             color: #000000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         input:-webkit-autofill {
@@ -51,10 +54,15 @@
             border-style: none;
             font-size: 1.2em;
             outline: none;
-            padding: 1px 0px 1px 12px;
+            /*padding: 1px 0px 1px 12px;*/
             text-decoration: none;
             display: inline-block;
             color: #000000 !important;
+
+            width: calc(100% - 10px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
         }
 
         input::-webkit-outer-spin-button,
@@ -71,12 +79,23 @@
         }
 
         #tijiao, #a1, #a2 {
-            background-color: rgba(255, 255, 255, .05);
-            box-shadow: 0 0 5px #8888;
-            font-size: 1.1em;
-            border-radius: 10px;
-            color: #000000;
+            /*background-color: #007bff;*/
+            /*!*background-color: rgba(255, 255, 255, .05);*!*/
+            /*box-shadow: 0 0 5px #8888;*/
+            /*font-size: 1.1em;*/
+            /*!*border-radius: 10px;*!*/
+            /*border-radius: 5px;*/
+            /*color: #000000;*/
+            /*border: none;*/
+            flex: 1;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: #fff;
             border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         #a1, #a2 {
@@ -84,10 +103,16 @@
             margin: 0px 8px;
             font-size: 16px;
             text-decoration: none;
+            color: #fff;
+
         }
 
         #tijiao {
-            padding: 10px 20px;
+            padding: 8px 12px;
+            margin: 0px 8px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #fff;
         }
 
         #usererr, #passworderr, #steperr {
@@ -186,7 +211,7 @@
     </button>
     <div id="fora">
         <a id="a1" href="https://www.bilibili.com/video/BV1gi421978q">刷步教程</a>
-        <a id="a2" href="https://github.com/CrabBoss-lab/ShuaBuShu">@蟹老板出品</a>
+        <a id="a2" href="https://github.com/CrabBoss-lab/ShuaBuShu">其他版本</a>
     </div>
     <form id="yourForm" action="#" method="GET">
         <div id="usererr"></div>
